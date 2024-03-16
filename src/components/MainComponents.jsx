@@ -1,4 +1,6 @@
+import Banner from "./Banner";
 import NavBar from "./NavBar";
+
 
 
 
@@ -8,6 +10,7 @@ const MainComponents = () => {
         {/* navbar */}
         <header>
             <NavBar></NavBar>
+            <Banner></Banner>
         </header>
 
           {/* main section */}
