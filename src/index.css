@@ -9,6 +9,7 @@
   main {
     @apply w-11/12 md:w-4/5 lg:max-w-[1320px] mx-auto font-lexend;
   }
+  CiSearch,
   p {
     @apply text-[#150B2B99] font-medium;
   }
