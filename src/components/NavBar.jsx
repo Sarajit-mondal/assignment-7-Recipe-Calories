@@ -6,7 +6,7 @@ const NavBar = () => {
         <nav className="flex text-center gap-5 py-5  flex-col md:flex-row items-center justify-between">
             <h2>Recipe Calories</h2>
             <div className="flex flex-col md:flex-row items-center justify-between gap-5 md:gap-20">
-                <ul className="flex flex-col md:flex-row gap-4 md:gap-12">
+                <ul className="flex flex-col md:flex-row gap-4 md:gap-8">
                  <li><a href="#">Home</a></li>
                  <li><a href="#">Recipes</a></li>
                  <li><a href="#">About</a></li>

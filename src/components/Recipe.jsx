@@ -3,10 +3,18 @@ import { CiClock2 } from "react-icons/ci";
  import { AiOutlineFire } from "react-icons/ai";
   import { Slide, ToastContainer, toast } from 'react-toastify';
    import 'react-toastify/dist/ReactToastify.css';
+import { useState } from "react";
 
 
 const Recipe = ({recipe,handleWantToCook}) => {
    const {recipe_name,short_description,preparing_time,calories,recipe_image,ingredients} = recipe;
+
+   const [ingredient,setIngredient] = useState([1,2,3])
+
+   const handleShowMore =(ingredients)=>{
+      ingredients.length === ingredient.length ? setIngredient([1,2,3]): setIngredient(ingredients);
+      
+   }
 
     return (
          <div>
@@ -24,10 +32,20 @@ const Recipe = ({recipe,handleWantToCook}) => {
                     </div>
                     
                      <ul className="list-disc [&>li]:ml-6 space-y-2">
-                        <h3>Ingredients: 6</h3>
-                        <li>{ingredients[0]}</li>
-                        <li>{ingredients[1]}</li>
-                        <li>{ingredients[2]}</li>
+                        <h3>Ingredients: {ingredients.length}</h3>
+                        {/* show more and show less */}
+                        {
+                            ingredient.map((item,inx) =><li key={inx +1}>{ingredients[inx]}</li>) 
+                        }
+        
+                        <p onClick={()=>handleShowMore(ingredients)} className="cursor-pointer hover:font-bold">
+                        {
+                            ingredients.length === ingredient.length ? "Show less" :"Show More..." 
+                        }
+                        {/* show more and show less */}
+                        
+                        </p>
+                         
                      </ul>
                      <div className="flex items-center gap-x-5">
                         <span className="flex items-center   py-2"><CiClock2 className="mr-1"></CiClock2>{preparing_time}</span>   

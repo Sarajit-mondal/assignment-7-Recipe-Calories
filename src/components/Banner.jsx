@@ -8,8 +8,8 @@ const Banner = () => {
             <p className="text-white">Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.</p>
 
             <div className="space-x-6 py-4">
-             <button className=" bg-green-500 rounded-full btn active:scale-105 text-black ">Want to Cook</button>
-             <button className=" bg-transparent rounded-full btn active:scale-105 text-white hover:text-black">Want to Cook</button>
+             <button className=" bg-green-500 rounded-full btn active:scale-105 text-black ">Explore Now</button>
+             <button className=" bg-transparent rounded-full btn active:scale-105 text-white hover:text-black">Our Feedback</button>
           </div>
           </div>
 
