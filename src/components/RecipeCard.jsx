@@ -68,7 +68,9 @@ const RecipeCard = ({wantCook,handleDelete}) => {
          {/* cooking part  */}
           <div className="mt-16">
           <h3 className=" mx-auto max-w-[350px] border-b-2 pb-5 text-center">Currently cooking: {cooking.length}</h3>
-          <table className=" table-auto mt-5">
+
+           {
+                    cooking.length > 0 && <table className=" w-full table-auto mt-5">
             <thead className="text-left my-5">
                 <tr>
                 <th>Name</th>
@@ -88,15 +90,20 @@ const RecipeCard = ({wantCook,handleDelete}) => {
              }
             
                 {/* calculation */}
-            <tr  className="bg-[#28282824] py-5">
+                <tr  className="bg-[#28282824] py-5">
                 <td></td>
                 <td className="font-extrabold">Total Time = {totalTimes} minutes</td>
                 <td className="font-extrabold">Total Calories = {totalCalories} Calories</td>
             </tr>
+                
+            
             </tbody>
             
             
           </table>
+
+           }        
+          
          </div>  
          
         

@@ -31,7 +31,7 @@ const Recipes = () => {
     const handleDelete =(id) =>{
       const newwantToCook = wantCook.filter(newCook => newCook.recipe_id !== id);
 
-      console.log(newwantToCook)
+      setWantCook(newwantToCook)
 
     }
     return(
