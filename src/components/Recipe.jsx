@@ -38,6 +38,7 @@ const Recipe = ({recipe,handleWantToCook}) => {
                     <ToastContainer 
                     autoClose ={2000}
                     transition={Slide}
+                  
                     ></ToastContainer>
                     </div>
                 </div>

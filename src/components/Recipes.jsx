@@ -23,8 +23,16 @@ const Recipes = () => {
         const newRecipe = [recipe,...wantCook]
         setWantCook(newRecipe)
       }else{
-       toast.warn("This Item Already Add",{
-       
+       toast.error("This Item Already Add",{
+       position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+
        })
       
       }
