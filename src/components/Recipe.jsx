@@ -1,6 +1,10 @@
 
 import { CiClock2 } from "react-icons/ci";
  import { AiOutlineFire } from "react-icons/ai";
+  import { Slide, ToastContainer, toast } from 'react-toastify';
+   import 'react-toastify/dist/ReactToastify.css';
+
+
 const Recipe = ({recipe,handleWantToCook}) => {
    const {recipe_name,short_description,preparing_time,calories,recipe_image,ingredients} = recipe;
 
@@ -24,7 +28,11 @@ const Recipe = ({recipe,handleWantToCook}) => {
                         <span className="flex items-center "><AiOutlineFire className="mr-3"></AiOutlineFire> {calories}</span>   
                      </div>
                     <div>
-                    <button onClick={()=>handleWantToCook(recipe)} className=" bg-green-500 rounded-full py-2 px-6 cursor-pointer active:scale-105 text-black hover:bg-green-400">Want to Cook</button>
+                    <button onClick={()=>handleWantToCook(recipe,toast)} className=" bg-green-500 rounded-full py-2 px-6 cursor-pointer active:scale-105 text-black hover:bg-green-400">Want to Cook</button>
+                    <ToastContainer 
+                    autoClose ={2000}
+                    transition={Slide}
+                    ></ToastContainer>
                     </div>
                 </div>
             </div>

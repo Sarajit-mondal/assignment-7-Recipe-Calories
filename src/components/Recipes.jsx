@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Recipe from "./Recipe"
 import RecipeCard from "./RecipeCard"
 
+
 const Recipes = () => {
    
     const [recipes,setRecipes] = useState([])
@@ -14,16 +15,24 @@ const Recipes = () => {
     },[])
 
     // want to cook
-    const handleWantToCook =(recipe)=>{
+    const handleWantToCook =(recipe,toast)=>{
       const isAdded =  wantCook.find(rec => rec.recipe_id === recipe.recipe_id)
       if(!isAdded){
         const newRecipe = [recipe,...wantCook]
         setWantCook(newRecipe)
       }else{
-        alert("already added")
+       toast.warn("This Item Already Add",{
+       
+       })
+      
       }
-      
-      
+    }
+
+    const handleDelete =(id) =>{
+      const newwantToCook = wantCook.filter(newCook => newCook.recipe_id !== id);
+
+      console.log(newwantToCook)
+
     }
     return(
         <>
@@ -34,7 +43,7 @@ const Recipes = () => {
          }
         
          </div>
-         <RecipeCard wantCook={wantCook}></RecipeCard>
+         <RecipeCard wantCook={wantCook} handleDelete={handleDelete}></RecipeCard>
          </div>
         </>
     );
