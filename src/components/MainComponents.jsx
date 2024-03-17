@@ -1,5 +1,6 @@
 import Banner from "./Banner";
 import NavBar from "./NavBar";
+import Recipes from "./Recipes";
 
 
 
@@ -15,7 +16,7 @@ const MainComponents = () => {
 
           {/* main section */}
         <main>
-        
+         <Recipes></Recipes>
         </main>
         </>
     );
