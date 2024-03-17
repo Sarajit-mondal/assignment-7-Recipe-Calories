@@ -36,7 +36,7 @@ const RecipeCard = ({wantCook,handleDelete}) => {
     
     return (
         <div className="w-full md:w-2/5 ">
-          <div>
+          <div className="border-2 border-green-100 py-3 px-1 rounded-2xl">
           <h3 className=" mx-auto max-w-[350px] border-b-2 pb-5 text-center">Want to cook: {wantCook.length}</h3>
           <table className=" w-full table-auto mt-5">
             <thead className="text-left my-5">
@@ -66,11 +66,11 @@ const RecipeCard = ({wantCook,handleDelete}) => {
          </div> 
 
          {/* cooking part  */}
-          <div className="mt-16">
+          <div  className=" mt-16 border-2 border-green-100 py-3 px-1 rounded-2xl">
           <h3 className=" mx-auto max-w-[350px] border-b-2 pb-5 text-center">Currently cooking: {cooking.length}</h3>
 
            {
-                    cooking.length > 0 && <table className=" w-full table-auto mt-5">
+            cooking.length > 0 && <table className=" w-full table-auto mt-5">
             <thead className="text-left my-5">
                 <tr>
                 <th>Name</th>

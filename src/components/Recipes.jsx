@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import Recipe from "./Recipe"
 import RecipeCard from "./RecipeCard"
+import OurRecipesTitle from "./OurRecipesTitle";
+
 
 
 const Recipes = () => {
@@ -36,6 +38,10 @@ const Recipes = () => {
     }
     return(
         <>
+      
+        <OurRecipesTitle></OurRecipesTitle>
+       
+        
         <div className=" my-10 flex flex-col gap-10 md:flex-row justify-between">
          <div className="w-full md:w-3/5 grid grid-cols-1 md:grid-cols-2 gap-5  ">
          {
